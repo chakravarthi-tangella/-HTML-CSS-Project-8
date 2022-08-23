@@ -1,44 +1,37 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
 *{
     padding: 0;
     margin: 0;
     outline: 0;
-    font-family: 'Roboto';
 }
 
 body{
-    background-image: url(../images/backcover.svg);
-    background-repeat: no-repeat;
-    background-size: 970px;
-    background-position: 570px -300px;
-    
+    font-family: 'Roboto';
 }
 
 .main-div{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-image: url(../images/backcover.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: right 0px top -200px;
 }
 
+/* Navbar */
 nav{
-    flex: 0.15;
-    width: 100%;
+    padding: 1.5rem 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
-nav>img{
-    position: absolute;
-    left: 100px;
-    width: 100px;
+img[alt = "logo"]{
+    width: 8%;
 }
 
 .nav-items{
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -46,13 +39,11 @@ nav>img{
 }
 
 .nav-item{
-    color: #3E4794;
-    font-size: 15px;
+    color: #2c326e;
+    font-size: 1rem;
 }
 
 .signin-btn{
-    position: absolute;
-    right: 100px;
     background: linear-gradient(90deg,
     #965CF2 0%,
     #FF8BDD 100%);
@@ -63,81 +54,127 @@ nav>img{
     border: none;
 }
 
-.intro-section{
-    flex: 0.85;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+nav .fa-bars {
+    display: none;
 }
 
-.left-section{
-    flex: 0.4;
-    height: 100%;
+/* Intro Section */
+.intro-section{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* left section */
+.left-section{
+    width: 35%;
+    padding-left: 90px;
 }
 
 .left-section h1{
-    width: 70%;
-    font-size: 80px;
-    padding-left: 90px;
+    font-size: 6rem;
     padding-top: 100px;
     color: #3E4794;
 }
 
 .left-section h4{
-    width: 60%;
-    padding-left: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    width: 80%;
+    padding: 40px 0px;
     line-height: 30px;
     color: #3E4794;
-    font-size: 15px;
-    position: relative;
+    font-size: 1.2rem;
+    font-weight: 200;
 }
 
 .learn-more-btn{
     background: linear-gradient(90deg,
     #965CF2 0%,
     #FF8BDD 100%);
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #fff;
-    padding: 10px 40px;
-    border-radius: 50px;
+    padding: 10px 30px;
+    border-radius: 5rem;
     border: none;
-    position: absolute;
-    bottom: 180px;
-    left: 150px;
 }
 
+/* right-section */
 .imgs-div{
-    flex: 0.6;
-    height: 100%;
+    width: 60%;
     position: relative;
 }
 
-.imgs-div img:last-child{
-    width: 650px;
-    z-index: 2;
+.vector-img{
+    width: 80px;
     position: absolute;
-    left: 70px;
-    top: -15px;
+    bottom: 6rem;
+    left: 2rem;
 }
 
-.imgs-div .vector-img{
-    width: 100px;
-    position: absolute;
-    left: 0px;
-    bottom: 100px;
-}
-
-.imgs-div .vector-dot{
+.vector-dot{
     width: 15px;
     position: absolute;
-    left: 60px;
-    bottom: 190px;
+    bottom: 10rem;
+    left: 5rem;
 }
+
+img[alt = "intro-img"]{
+    width: 70%;
+    position: absolute;
+    left: 5rem;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    .nav-items {
+      display: none;
+    }
+    nav .fa-bars {
+      display: block;
+    }
+    .main-div{
+      height: 100vh;
+      background-image: url(../images/backcover.svg);
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: right 0px top -200px;
+    }
+    .intro-section {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .imgs-div,
+    .left-section {
+      width: 100%;
+      margin-bottom: 10rem;
+    }
+    .vector-img{
+      width: 80px;
+      position: absolute;
+      bottom: -35rem;
+      left: 5rem;
+    }
+  
+   .vector-dot{
+      width: 15px;
+      position: absolute;
+      bottom: -30rem;
+      left: 8rem;
+   }
+
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .signin-btn {
+      display: none;
+    }
+    .left-section h1 {
+      font-size: 48px;
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    .left-section h1 {
+      font-size: 36px;
+    }
+  }
