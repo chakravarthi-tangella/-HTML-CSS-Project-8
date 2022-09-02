@@ -1,4 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -27,7 +29,7 @@ nav{
 }
 
 img[alt = "logo"]{
-    width: 8%;
+    width: 150px;
 }
 
 .nav-items{
@@ -39,7 +41,7 @@ img[alt = "logo"]{
 }
 
 .nav-item{
-    color: #2c326e;
+    color: #484fa2;
     font-size: 1rem;
 }
 
@@ -48,10 +50,11 @@ img[alt = "logo"]{
     #965CF2 0%,
     #FF8BDD 100%);
     color: #fff;
-    padding: 5px 15px;
+    padding: 8px 20px;
     border-radius: 10px;
     font-size: 12px;
     border: none;
+    font-size: 1rem;
 }
 
 nav .fa-bars {
@@ -62,46 +65,53 @@ nav .fa-bars {
 .intro-section{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-/* left section */
+/* Left Section */
 .left-section{
-    width: 35%;
-    padding-left: 90px;
+    padding-left: 5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.left-section h1{
+.left-section>h1{
+    color: #3E4794;
     font-size: 6rem;
-    padding-top: 100px;
-    color: #3E4794;
+    font-weight: 500;
 }
 
-.left-section h4{
-    width: 80%;
-    padding: 40px 0px;
-    line-height: 30px;
+.left-section>h4{
     color: #3E4794;
-    font-size: 1.2rem;
-    font-weight: 200;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 80%;
 }
 
 .learn-more-btn{
+    width: 280px;
     background: linear-gradient(90deg,
     #965CF2 0%,
     #FF8BDD 100%);
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 5rem;
+    padding: 1rem 0rem;
+    border-radius: 4rem;
     border: none;
 }
 
-/* right-section */
+/* Imgs Section */
 .imgs-div{
     width: 60%;
     position: relative;
+}
+
+img[alt = "intro-img"]{
+    width: 80%;
 }
 
 .vector-img{
@@ -118,48 +128,61 @@ nav .fa-bars {
     left: 5rem;
 }
 
-img[alt = "intro-img"]{
-    width: 70%;
-    position: absolute;
-    left: 5rem;
-}
 
 /* Responsive Design */
+@media only screen and (max-width: 1360px) {
+    .left-section>h1{
+        font-size: 4.5rem;
+    }
+    
+    .left-section>h4{
+        color: #3E4794;
+        font-size: 1.2rem;
+    }
+    
+    .learn-more-btn{
+        width: 200px;
+        font-size: 1.2rem;
+    }
+}
 @media only screen and (max-width: 1024px) {
+    .main-div{
+    background-image: none;
+    }
     .nav-items {
       display: none;
     }
     nav .fa-bars {
       display: block;
     }
-    .main-div{
-      height: 100vh;
-      background-image: url(../images/backcover.svg);
-      background-repeat: no-repeat;
-      background-size: 60%;
-      background-position: right 0px top -200px;
-    }
     .intro-section {
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      gap: 8rem;
     }
+
+    .left-section{
+        align-items: center;
+    }
+
+    .left-section>h4{
+        width: 70%;
+    }
+
     .imgs-div,
     .left-section {
       width: 100%;
-      margin-bottom: 10rem;
+      text-align: center;
     }
+
     .vector-img{
-      width: 80px;
-      position: absolute;
-      bottom: -35rem;
+      bottom: 0rem;
       left: 5rem;
     }
   
    .vector-dot{
-      width: 15px;
-      position: absolute;
-      bottom: -30rem;
-      left: 8rem;
+      bottom: 5rem;
+      left: 9rem;
    }
 
   }
@@ -168,13 +191,19 @@ img[alt = "intro-img"]{
     .signin-btn {
       display: none;
     }
-    .left-section h1 {
-      font-size: 48px;
+
+    img[alt = "logo"]{
+        width: 100px;
     }
+
   }
 
   @media only screen and (max-width: 575px) {
     .left-section h1 {
-      font-size: 36px;
+      font-size: 3rem;
     }
   }
+
+
+
+
